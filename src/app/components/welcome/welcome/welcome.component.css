@@ -1,0 +1,10 @@
+.welcome{
+  border-color: blanchedalmond;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text{
+  margin-top: 80px;
+
+}

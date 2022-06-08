@@ -1,0 +1,28 @@
+<mat-list-item>
+  <div matLine>
+    <mat-slide-toggle
+      (change)="toggle(item.id)"
+      [checked]="!!item.done"
+      color="primary"
+    >
+      <span [ngClass]="{ done: item.done }">
+        {{ item.title }}
+      </span>
+      <span [ngClass]="{ done: item.done }" class="demo-2">
+        -- {{ item.date | date }}
+      </span>
+    </mat-slide-toggle>
+  </div>
+  <p matLine [ngClass]="{ done: item.done }">{{ item.text }}</p>
+
+  <button
+    matTooltip="Delete item"
+    matTooltipPosition="above"
+    mat-icon-button
+    (click)="removeTask(item.id)"
+  >
+    <mat-icon aria-label="Example icon-button with a heart icon"
+      >delete</mat-icon
+    >
+  </button>
+</mat-list-item>

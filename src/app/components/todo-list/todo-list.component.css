@@ -1,0 +1,105 @@
+.main{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-color: blanchedalmond;
+  min-height: 100%;
+}
+.form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container>* {
+  width: 100%;
+}
+.middle{
+  width: 50%;
+}
+
+.right{
+  width: 50%;
+background-color: blanchedalmond;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+mat-card {
+  width: 90%;
+  /* max-width: 400px; */
+  margin: 20px auto 0 auto;
+}
+
+mat-slide-toggle {
+  width: 100%;
+}
+
+::ng-deep .mat-list-item-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+mat-divider {
+  top: 0;
+  bottom: auto;
+}
+
+mat-icon {
+  color: grey;
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+::ng-deep .mat-list .mat-list-item .mat-line {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+
+.register-wrapper {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 80%;
+}
+
+.register-wrapper mat-card-header,
+.register-wrapper mat-card-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.register-wrapper mat-card-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-wrapper mat-form-field {
+  display: block;
+}
+
+.search-form{
+  background-color: rgb(67, 69, 70);
+  border-radius: 5px;
+  justify-content: center;
+  display: flex;
+  margin-top: 5px;
+}
