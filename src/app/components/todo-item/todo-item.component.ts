@@ -18,6 +18,8 @@ export class TodoItemComponent implements OnInit {
   }
 
   public removeTask(id: number): void {
+    console.log('click remove task');
+
     this.store.dispatch(new RemoveItem(id));
   }
   public toggle(number: number): void {

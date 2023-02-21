@@ -44,6 +44,7 @@ import { ItemState } from './store/item/item.state';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from './pipes/date.pipe';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
+import { PlayComponent } from './components/play/play.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { TodoItemComponent } from './components/todo-item/todo-item.component';
     NavBarComponent,
     DatePipe,
     TodoItemComponent,
+    PlayComponent,
   ],
   imports: [
     BrowserModule,
