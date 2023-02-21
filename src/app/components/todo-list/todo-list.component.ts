@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { Select, Selector, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { AddItem, FetchItemsByIdTodo, OrderBy, RemoveItem, UpdateFilter, UpdateFilterParameter, UpdateItem } from 'src/app/store/item/item.actions';
@@ -21,13 +21,13 @@ export interface Subject {
 export class TodoListComponent implements OnInit {
 
   search: string = "";
-  myForm: FormGroup;
+  myForm: UntypedFormGroup;
 
   items$: Observable<Item[]> | undefined
 
   //@Select(ItemState.getAllItems) items$: Observable<Item[]> | undefined
 
-  constructor(public fb: FormBuilder,
+  constructor(public fb: UntypedFormBuilder,
     private store: Store) {
 
     this.items$ = this.store.select(ItemState.getAllItems);
