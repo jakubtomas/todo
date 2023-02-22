@@ -6,9 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 
-import {
-  MatSliderModule,
-} from '@angular/material/slider';
+import { MatSliderModule } from '@angular/material/slider';
 import { MatInputModule } from '@angular/material/input';
 ///import { MatSnackBarModule } from '@angular/material';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -35,6 +33,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { MatStepperModule } from '@angular/material/stepper';
 import { NgxsModule } from '@ngxs/store';
 
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
@@ -45,6 +44,7 @@ import { FormsModule } from '@angular/forms';
 import { DatePipe } from './pipes/date.pipe';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { PlayComponent } from './components/play/play.component';
+import { StepperComponent } from './components/stepper/stepper.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +55,7 @@ import { PlayComponent } from './components/play/play.component';
     DatePipe,
     TodoItemComponent,
     PlayComponent,
+    StepperComponent
   ],
   imports: [
     BrowserModule,
@@ -88,15 +89,13 @@ import { PlayComponent } from './components/play/play.component';
     MatCardModule,
     MatMenuModule,
     FormsModule,
-
+    MatStepperModule,
     HttpClientModule,
-    NgxsModule.forRoot([
-      ItemState,
-    ]),
+    NgxsModule.forRoot([ItemState]),
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsLoggerPluginModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
