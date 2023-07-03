@@ -9,13 +9,10 @@ import { Item } from 'src/app/store/item/item.model';
   styleUrls: ['./todo-item.component.css']
 })
 export class TodoItemComponent implements OnInit {
-
   @Input('item') item!: Item;
-  constructor(private store: Store) {
-  }
+  constructor(private store: Store) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   public removeTask(id: number): void {
     console.log('click remove task');
@@ -23,6 +20,6 @@ export class TodoItemComponent implements OnInit {
     this.store.dispatch(new RemoveItem(id));
   }
   public toggle(number: number): void {
-    this.store.dispatch(new UpdateItem(number))
+    this.store.dispatch(new UpdateItem(number));
   }
 }
